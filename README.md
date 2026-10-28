@@ -1,4 +1,4 @@
-# My-Ventoy
+# the-handy-os-drive
 
 A link manifest for my personal Ventoy multiboot USB drive.
 
