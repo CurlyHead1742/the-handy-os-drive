@@ -51,7 +51,7 @@ and any notes on the specific build/edition present on the drive.
 
 ## Status on the drive (2026-10-29)
 
-28 images, about 118 GB of the 230 GB data partition used.
+24 images, about 90 GB of the 230 GB data partition used.
 
 **On the drive, verified against the official checksum:**
 - Arch family: Arch, BigLinux (MD5), CachyOS, EndeavourOS, Garuda Mokka, Manjaro GNOME, Omarchy
