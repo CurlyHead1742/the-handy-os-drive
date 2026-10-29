@@ -28,7 +28,7 @@ trust an ISO, including a copy already sitting on a drive, just because it's nam
 ### History: it used to be Ventoy
 
 Until late October 2026 this was a Ventoy drive (exFAT data partition plus a small `VTOYEFI` partition), and
-this README described it that way. On 2026-10-28 the laptop could not read the main partition any more,
+this README described it that way. On 2026-10-28 the drive stopped being readable on one of my machines,
 and the drive turned out to carry Easy2Boot instead. The decision was to **keep Easy2Boot** and not go
 back to Ventoy. Ventoy-specific advice (`Ventoy2Disk.sh`, `VTOYEFI`, enrolling the Ventoy key under
 Secure Boot) no longer applies.
@@ -49,12 +49,20 @@ ISOs/
 Each leaf file (e.g. `Windows10.iso.md`) documents the project name, the official download URL,
 and any notes on the specific build/edition present on the drive.
 
-## Status on the drive (2026-10-28)
+## Status on the drive (2026-10-29)
 
-**On the drive, checksum verified on 2026-10-28:** CachyOS 260809 (re-downloaded, the first copy was cut off), Garuda Mokka (latest), Pop!_OS 24.04 Intel build 20, KDE neon (user, 2026-10-25), Deepin 25.2.0.
+28 images, about 118 GB of the 230 GB data partition used.
 
-**On the drive, not re-verified yet:** Manjaro GNOME 26.1.0, BigLinux 2026-08-08, Debian 13.7.0 netinst, Ubuntu 26.04.1 desktop, AlmaLinux 9.8 minimal, CentOS Stream 9 boot.
+**On the drive, verified against the official checksum:**
+- Arch family: Arch, BigLinux (MD5), CachyOS, EndeavourOS, Garuda Mokka, Manjaro GNOME, Omarchy
+- Debian family: Debian 13.7 netinst, KDE neon, Kali 2026.3, LMDE 7, Linux Mint 22.3, MX Linux 25.3, Pop!_OS 24.04, Ubuntu 26.04.1
+- Fedora family: AlmaLinux 9.8, Bazzite, CentOS Stream 9, Fedora KDE Plasma 44, Fedora Server 44 (netinst), Fedora Workstation 44, Nobara 44
+- Other: Deepin 25.2.0
 
-**Listed here but not on the drive yet** (the entries are the shopping list): Arch, AnduinOS, elementary OS, Kali, Linux Mint 22.3, Ubuntu MATE, Ubuntu Server, Fedora 44 KDE, Fedora 44 Workstation, Rocky 9.8, Clonezilla, GParted, Memtest86+, Rescatux, SystemRescue, Windows 10, Windows 11. Zorin OS 18.1 Core is downloaded on the laptop but not copied to the drive yet.
+**On the drive, size only (no official checksum available):** Zorin OS 18.1 Core.
+
+**Fixed on 2026-10-29:** AlmaLinux, Manjaro and BigLinux had been cut off during their first downloads (about half the file). They were resumed and now match the official values.
+
+**Listed here but not on the drive yet** (the entries are the shopping list): AnduinOS, elementary OS, Ubuntu MATE, Ubuntu Server, Rocky 9.8, Clonezilla, GParted, Memtest86+, Rescatux, SystemRescue, Windows 10, Windows 11.
 
 The mobile systems (GrapheneOS, LineageOS, /e/OS, postmarketOS, Ubuntu Touch, Plasma Mobile) are flashed onto phones, not booted from a PC, so they do not belong on this drive.
