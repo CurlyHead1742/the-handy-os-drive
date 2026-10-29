@@ -42,27 +42,25 @@ ISOs/
 │   ├── Debian-family/     (AnduinOS, Debian, elementary OS, Kali, Mint, Pop!_OS, Ubuntu variants, Zorin)
 │   ├── Fedora-family/     (AlmaLinux, CentOS Stream, Fedora KDE/Workstation, KDE neon, Rocky)
 │   └── Other/             (Deepin)
-├── Rescue/                (Clonezilla, GParted, Memtest86+, Rescatux, SystemRescue)
+├── Rescue/                (Clonezilla, GParted, Memtest86+, Rescatux, SystemRescue; on the drive in _ISO/RESCUE and _ISO/UTILITIES_MEMTEST)
 └── Windows/               (Windows 10, Windows 11)
 ```
 
 Each leaf file (e.g. `Windows10.iso.md`) documents the project name, the official download URL,
 and any notes on the specific build/edition present on the drive.
 
+## Layout rule on the drive
+
+Every image sits in its own short, named folder. No loose ISOs at family level. Easy2Boot's own helper scripts live in `_ISO/_Tools/`; the boot files in the drive root (`grldr`, `menu.lst`, `*PESE.ini`, `unattend.xml` etc.) must stay there.
+
 ## Status on the drive (2026-10-29)
 
-24 images, about 90 GB of the 230 GB data partition used.
+**31 images, about 98 GB used.**
 
-**On the drive, verified against the official checksum:**
-- Arch family: Arch, BigLinux (MD5), CachyOS, EndeavourOS, Garuda Mokka, Manjaro GNOME, Omarchy
-- Debian family: Debian 13.7 netinst, KDE neon, Kali 2026.3, LMDE 7, Linux Mint 22.3, MX Linux 25.3, Pop!_OS 24.04, Ubuntu 26.04.1
-- Fedora family: AlmaLinux 9.8, Bazzite, CentOS Stream 9, Fedora KDE Plasma 44, Fedora Server 44 (netinst), Fedora Workstation 44, Nobara 44
-- Other: Deepin 25.2.0
+- **Checksum verified against official sources:** every Linux image listed under `Linux/`, plus Ubuntu Server 26.04.1, Rocky 9.8 minimal, SystemRescue 13.02 and Clonezilla 3.3.3-37.
+- **Size-only (no official checksum available):** Zorin OS 18.1, GParted 1.8.1, Memtest86+ 9.00, Rescatux 0.74.
+- **Not booted yet.** Nothing has been boot-tested.
 
-**On the drive, size only (no official checksum available):** Zorin OS 18.1 Core.
-
-**Fixed on 2026-10-29:** AlmaLinux, Manjaro and BigLinux had been cut off during their first downloads (about half the file). They were resumed and now match the official values.
-
-**Listed here but not on the drive yet** (the entries are the shopping list): AnduinOS, elementary OS, Ubuntu MATE, Ubuntu Server, Rocky 9.8, Clonezilla, GParted, Memtest86+, Rescatux, SystemRescue, Windows 10, Windows 11.
+**Listed here but not on the drive:** AnduinOS, elementary OS, Ubuntu MATE (no 26.04 release published), Windows 10 and Windows 11 (Microsoft only hands out one-time download links, so these are added by hand).
 
 The mobile systems (GrapheneOS, LineageOS, /e/OS, postmarketOS, Ubuntu Touch, Plasma Mobile) are flashed onto phones, not booted from a PC, so they do not belong on this drive.
