@@ -39,8 +39,9 @@ Secure Boot) no longer applies.
 ISOs/
 ├── Linux/
 │   ├── Arch-family/       (Arch, BigLinux, CachyOS, Garuda, Manjaro)
-│   ├── Debian-family/     (AnduinOS, Debian, elementary OS, Kali, Mint, Pop!_OS, Ubuntu variants, Zorin)
-│   ├── Fedora-family/     (AlmaLinux, CentOS Stream, Fedora KDE/Workstation, KDE neon, Rocky)
+│   ├── Debian-family/     (AnduinOS, antiX, Debian, elementary OS, Kali, KDE neon, LMDE, Mint, MX Linux,
+│   │                        Pop!_OS, Q4OS, Ubuntu variants, Zorin OS 18.1 + legacy 32-bit 15.3)
+│   ├── Fedora-family/     (AlmaLinux, Bazzite, CentOS Stream, Fedora KDE/Workstation/Server, Nobara, Rocky)
 │   └── Other/             (Deepin)
 ├── Rescue/                (Clonezilla, GParted, Memtest86+, Rescatux, SystemRescue; on the drive in _ISO/RESCUE and _ISO/UTILITIES_MEMTEST)
 └── Windows/               (Windows 10, Windows 11)
@@ -51,16 +52,20 @@ and any notes on the specific build/edition present on the drive.
 
 ## Layout rule on the drive
 
-Every image sits in its own short, named folder. No loose ISOs at family level. Easy2Boot's own helper scripts live in `_ISO/_Tools/`; the boot files in the drive root (`grldr`, `menu.lst`, `*PESE.ini`, `unattend.xml` etc.) must stay there.
+Every image sits in its own short, named folder. No loose ISOs at family level. The boot files in the drive root (`grldr`, `menu.lst`, `*PESE.ini`, `unattend.xml` etc.), plus `_ISO/e2b/` and `_ISO/MAINMENU/`, are core to Easy2Boot and must stay. Everything else Easy2Boot ships by default that wasn't actually in use — `_ISO/_Tools/` (Windows-only desktop utilities), `_ISO/docs/` (reference material), the Windows post-install automation kit (`_ISO/WINDOWS/installs/`), and empty placeholder folders (`WINPE`, `WIN`, `BACKUP`, `AUTO`, `ANTIVIRUS`, `DOS`) — was removed to keep the top level readable.
 
 ## Status on the drive (2026-10-29)
 
-**31 images, about 98 GB used.**
+**35 images, about 125 GB used** (Windows 10 x86, and Q4OS still finishing a copy to the drive as of this update).
 
 - **Checksum verified against official sources:** every Linux image listed under `Linux/`, plus Ubuntu Server 26.04.1, Rocky 9.8 minimal, SystemRescue 13.02 and Clonezilla 3.3.3-37.
-- **Size-only (no official checksum available):** Zorin OS 18.1, GParted 1.8.1, Memtest86+ 9.00, Rescatux 0.74.
+- **Size-only (no official checksum available):** Zorin OS 18.1, Zorin OS 15.3 Lite (32-bit), antiX 26.1 (32-bit), Q4OS 5.10 (32-bit), GParted 1.8.1, Memtest86+ 9.00, Rescatux 0.74.
 - **Not booted yet.** Nothing has been boot-tested.
 
-**Listed here but not on the drive:** AnduinOS, elementary OS, Ubuntu MATE (no 26.04 release published), Windows 10 and Windows 11 (Microsoft only hands out one-time download links, so these are added by hand).
+**Two genuinely 32-bit-only machine support:** antiX 26.1 and Zorin OS 15.3 Lite (and Q4OS 5.10) were added specifically for an old 32-bit-only Acer laptop that can't run any current mainstream distro. Zorin OS 15.3 is a legacy build kept for this reason; on 64-bit hardware use Zorin-OS-18.1-Core-64-bit.iso instead.
+
+**Listed here but not on the drive:** AnduinOS (upstream only publishes torrents, no direct HTTP link).
+
+**Now on the drive (previously listed as missing):** elementary OS 8.1, Ubuntu MATE 24.04.3, Windows 10 (x64 and x32), Windows 11.
 
 The mobile systems (GrapheneOS, LineageOS, /e/OS, postmarketOS, Ubuntu Touch, Plasma Mobile) are flashed onto phones, not booted from a PC, so they do not belong on this drive.
